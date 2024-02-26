@@ -14,18 +14,60 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/analytics',
+        redirectTo: '/accueil',
         pathMatch: 'full'
       },
       {
-        path: 'analytics',
-        loadComponent: () => import('./demo/dashboard/dash-analytics/dash-analytics.component')
+        path: 'accueil',
+        loadComponent: () => import('./demo/dashboard/accueil/accueil.component')
       },
       {
         path: 'component',
         loadChildren: () => import('./demo/ui-element/ui-basic.module').then((m) => m.UiBasicModule)
       },
-     
+      {
+        path: 'produits',
+        loadComponent: () => import('./demo/produits/produits.component')
+      },
+      {
+        path: 'reservation-produit',
+        loadComponent: () => import('./demo/reservation-produit/reservation-produit.component')
+      },
+      {
+        path: 'fournisseur',
+        loadComponent: () => import('./demo/fournisseur/fournisseur.component')
+      },
+      {
+        path: 'rapport',
+        loadComponent: () => import('./demo/rapport/rapport.component')
+      },
+      {
+        path: 'abonnement',
+        loadComponent: () => import('./demo/abonnement/abonnement.component')
+      },
+      {
+        path: 'notification',
+        loadComponent: () => import('./demo/notification/notification.component')
+      },
+      {
+        path: 'profil',
+        loadComponent: () => import('./demo/profil/profil.component')
+      },
+      {
+        path: 'parametre',
+        loadComponent: () => import('./demo/parametre/parametre.component')
+      }
+
+      // {
+      //   path: 'sample-page',
+      //   loadComponent: () => import('./demo/sample-page/sample-page.component')
+      // }
+      
+      // {
+      //   path: 'analytics',
+      //   loadComponent: () => import('./demo/dashboard/dash-analytics/dash-analytics.component')
+      // },
+      
       // {
       //   path: 'forms',
       //   loadComponent: () => import('./demo/forms & tables/form-elements/form-elements.component')
@@ -34,11 +76,6 @@ const routes: Routes = [
       //   path: 'tables',
       //   loadComponent: () => import('./demo/forms & tables/tbl-bootstrap/tbl-bootstrap.component')
       // },
-
-      // {
-      //   path: 'sample-page',
-      //   loadComponent: () => import('./demo/sample-page/sample-page.component')
-      // }
     ]
   },
   {

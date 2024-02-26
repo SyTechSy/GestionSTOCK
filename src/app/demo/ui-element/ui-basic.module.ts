@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { UiBasicRoutingModule } from './ui-basic-routing.module';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, UiBasicRoutingModule]
+  imports: [CommonModule, UiBasicRoutingModule],
 })
 export class UiBasicModule {}

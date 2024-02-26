@@ -1,8 +1,12 @@
 // Angular Import
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// importation de DATE
+import { registerLocaleData } from '@angular/common';
+import * as fr from '@angular/common/locales/fr';
 
 // project import
 import { AppRoutingModule } from './app-routing.module';
@@ -41,10 +45,16 @@ import { SharedModule } from './theme/shared/shared.module';
     NavContentComponent,
     NavItemComponent,
     NavCollapseComponent,
-    NavGroupComponent
+    NavGroupComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    registerLocaleData(fr.default);
+  }
+}

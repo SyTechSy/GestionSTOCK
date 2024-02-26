@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class NavContentComponent implements OnInit {
   // version
-  title = 'Demo application for version numbering';
+  title = 'Application de Gestion de stock';
   currentApplicationVersion = environment.appVersion;
 
   // public pops

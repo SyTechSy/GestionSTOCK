@@ -1,10 +1,96 @@
-<ul class="navbar-nav ms-auto">
+<ul class="navbar-nav ms-auto" >
+  
+  <!-- Pour la notification  -->
   <li>
     <div class="dropdown" ngbDropdown placement="auto">
-      <a ngbDropdownToggle href="javascript:"
-        ><i class="icon feather icon-bell" title="Notification"></i><span class="badge bg-danger"><span class="sr-only"></span></span
-      ></a>
-      <!-- <div ngbDropdownMenu class="dropdown-menu dropdown-menu-end notification">
+      <a ngbDropdownToggle routerLink="/notification">
+        <i class="icon feather icon-bell" title="Notification"></i>
+        <span class="badge bg-danger">
+          <span class="sr-only"></span>
+        </span>
+      </a>
+    </div>
+  </li>
+  
+  <!-- Pour la Paramètre  -->
+  <li>
+    <div class="dropdown">
+      <a routerLink="/parametre">
+        <i class="icon feather icon-lock" title="Paramètre"></i> 
+      </a>
+    </div>
+  </li> 
+
+  <!-- Pour le bare  -->
+  <li>
+    <div class="bare_vertical">
+      <div class="bare"></div>
+    </div>
+  </li>
+
+  <!-- Pour le nom de ta société -->
+  <li>
+    <div class="dropdown drp-user" ngbDropdown placement="auto">
+      <a href="javascript:" ngbDropdownToggle>
+        SytechSy 
+      </a>
+    </div>
+  </li>
+
+  <!-- Maintent pour le profil  -->
+    <!-- Image de profil  -->
+    <li>
+      <div class="dropdown drp-user" ngbDropdown placement="auto">
+        <a href="javascript:" ngbDropdownToggle>
+          <img src="assets/images/user/avatar-1.jpg" class="img-radius wid-30" alt="User-Profile-Image" />
+        </a>
+        <div class="dropdown-menu-end" ngbDropdownMenu>
+          <div class="pro-head ">
+            <!-- container de mon image et le nom  -->
+            <div class="content_image_name">
+              <!-- image  -->
+              <img src="assets/images/user/avatar-1.jpg" class="img-radius wid-40" alt="User-Profile-Image" />
+              <!-- span nom et prenom  -->
+              <span class="name_content">Diakaridia SY</span>
+            </div>
+            <!-- pour ce deconnecter  -->
+            <div class="lien_content">
+              <a href="#" class="" title="Deconnetez-vous">
+                <i class="feather icon-log-out"></i>
+              </a>
+            </div>
+          </div>
+          <!-- les list  -->
+          <ul class="pro-body">
+            <li>
+              <a class="dropdown-item" routerLink="/profil">
+                <i class="feather icon-user"></i> Mon profil
+              </a>
+            </li>
+
+            <li
+              ><a href="javascript:" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li
+            >
+            <li
+              ><a href="javascript:" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li
+            >
+          </ul>
+        </div>
+      </div>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+ <!--<div ngbDropdownMenu class="dropdown-menu dropdown-menu-end notification">
         <div class="noti-head">
           <h6 class="d-inline-block m-b-0">Notifications SY</h6>
           <div class="float-end">
@@ -59,10 +145,12 @@
           <a href="javascript:">show all</a>
         </div>
       </div> -->
-    </div>
-  </li>
 
-  <!-- Icon de mail  -->
+
+
+
+
+<!-- Icon de mail  -->
   <!-- <li (click)="this.visibleUserList = !this.visibleUserList">
     <div class="dropdown">
       <a href="javascript:" class="displayChatbox dropdown-toggle">
@@ -99,7 +187,3 @@
       </div>
     </div>
   </li> -->
-</ul>
-
-
-

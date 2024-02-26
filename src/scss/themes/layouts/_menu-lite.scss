@@ -573,6 +573,7 @@
   height: calc(100% - #{$header-height});
   margin-top: $header-height;
   top: 0;
+  // header left 
   background: $menu-dark-background;
   color: $menu-dark-text-color;
 
@@ -1730,9 +1731,9 @@
       dropdown-toggle {
         color: #fff;
 
-        &:hover {
-          color: $menu-light-text-color;
-        }
+        // &:hover {
+        //   color: $menu-light-text-color;
+        // }
 
         @media only screen and (max-width: 991px) {
           color: $menu-light-text-color;
