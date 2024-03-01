@@ -28,11 +28,12 @@ export class AdminComponent {
     this.windowWidth = window.innerWidth;
 
     if (current_url === baseHref + '/layout/collapse-menu' || (this.windowWidth >= 992 && this.windowWidth <= 1024)) {
-      GradientConfig.collapse_menu = true;
+      GradientConfig.collapse_menu = false;
     }
 
     this.navCollapsed = this.windowWidth >= 992 ? GradientConfig.collapse_menu : false;
     this.navCollapsedMob = false;
+
   }
 
   // public method

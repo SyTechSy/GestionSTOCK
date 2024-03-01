@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 
+import * as $ from 'jquery';
+import 'datatables.net';
+
+
 
 @Component({
   selector: 'app-accueil',
@@ -35,5 +39,14 @@ export default class AccueilComponent implements OnInit {
     this.today = new Date();
     this.AutoDate = this.pipe.transform(this.today, ' EEEE, le dd MMMM yyyy', 'fr') ?? '';
     this.AutoDateHeure = this.pipe.transform(this.today, 'HH:mm:ss') ?? '';
+  }
+
+  // pour mon table dataTable
+
+  ngAfterViewInit() {
+    $(document).ready(function () {
+      $('#dtBasicExample').DataTable();
+      $('.dataTables_length').addClass('bs-select');
+    });
   }
 }
