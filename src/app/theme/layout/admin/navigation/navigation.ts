@@ -232,7 +232,7 @@ export const NavigationItems: NavigationItem[] = [
         type: 'item',
         url: '/notification',
         classes: 'nav-item',
-        icon: 'feather icon-sidebar'
+        icon: 'feather icon-bell'
       },
       // Pour les Paramètre
       {
@@ -241,7 +241,7 @@ export const NavigationItems: NavigationItem[] = [
         type: 'item',
         url: '/parametre',
         classes: 'nav-item',
-        icon: 'feather icon-sidebar'
+        icon: 'feather icon-settings'
       }
     ]
   },

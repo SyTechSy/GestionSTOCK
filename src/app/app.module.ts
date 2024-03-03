@@ -1,8 +1,10 @@
 // Angular Import
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID, } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { CommonModule }   from '@angular/common';
 
 // importation de DATE
 import { registerLocaleData } from '@angular/common';
@@ -27,6 +29,8 @@ import { NavCollapseComponent } from './theme/layout/admin/navigation/nav-conten
 import { NavGroupComponent } from './theme/layout/admin/navigation/nav-content/nav-group/nav-group.component';
 import { NavItemComponent } from './theme/layout/admin/navigation/nav-content/nav-item/nav-item.component';
 import { SharedModule } from './theme/shared/shared.module';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +51,17 @@ import { SharedModule } from './theme/shared/shared.module';
     NavCollapseComponent,
     NavGroupComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
+  
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    SharedModule, 
+    FormsModule, 
+    ReactiveFormsModule, 
+    BrowserAnimationsModule,
+    CommonModule, 
+    NgApexchartsModule,
+  ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' }
   ],
