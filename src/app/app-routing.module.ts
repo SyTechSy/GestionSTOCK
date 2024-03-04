@@ -56,7 +56,7 @@ const routes: Routes = [
       {
         path: 'parametre',
         loadComponent: () => import('./demo/parametre/parametre.component')
-      }
+      },
 
       // {
       //   path: 'sample-page',

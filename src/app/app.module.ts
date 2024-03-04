@@ -33,6 +33,7 @@ import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

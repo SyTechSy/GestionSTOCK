@@ -225,6 +225,15 @@ export const NavigationItems: NavigationItem[] = [
         classes: 'nav-item',
         icon: 'feather icon-sidebar'
       },
+      // Pour mon abonnement
+      {
+        id: 'charts',
+        title: 'Mon charts',
+        type: 'item',
+        url: '/charts',
+        classes: 'nav-item',
+        icon: 'feather icon-sidebar'
+      },
       // Pour les notifications
       {
         id: 'notification',
