@@ -273,16 +273,7 @@
   margin-right: 7px;
 }
 
-/////////////// right_row_dash_profil
-/// 
 
-.left_row_dash_profil {
-  display: flex;
-}
-
-.right_row_dash_profil {
-  margin-left: 100px;
-}
 
 .row_dash_profil_membre {
   height: 210px;
@@ -471,8 +462,40 @@
   border-bottom: 1px solid #22222244;
 }
 
+
+/////////////// right_row_dash_profil
+/// 
+
+.left_row_dash_profil {
+  display: flex;
+}
+
+// .right_row_dash_profil {
+//   margin-left: 100px;
+// }
+
 // chart 
-#chart {
-  max-width: 650px;
-  margin: 35px auto;
+
+// #chart {
+  // width: 250px;
+// }
+
+.chart {
+  margin-left: 25%;
+}
+
+.blog_row {
+  position: relative;
+}
+
+.revenu_img {
+  width: 200px;
+  position: absolute;
+  bottom: -17px;
+  right: 20px;
+}
+
+.revenu_img img {
+  width: 100%;
+  height: 100%;
 }

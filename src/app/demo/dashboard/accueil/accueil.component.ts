@@ -1,11 +1,17 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
+
+
+// import { NgChartsModule } from 'ng2-charts';
+  
+import { ChartConfiguration} from "chart.js";
+import { BaseChartDirective } from 'ng2-charts';
 
 
 @Component({
   selector: 'app-accueil',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BaseChartDirective],
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.scss'],
 })
@@ -13,6 +19,16 @@ export default class AccueilComponent implements OnInit {
   // constructor
 
   constructor() {}
+
+  public radarChartOptions: ChartConfiguration<'radar'>['options'] = {
+    responsive: false,
+  };
+  public radarChartLabels: string[] = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+
+  public radarChartDatasets: ChartConfiguration<'radar'>['data']['datasets'] = [
+    { data: [65, 59, 90, 81, 56, 55, 40], label: 'Bénéfice total' },
+    { data: [28, 48, 40, 19, 96, 27, 100], label: 'Revenu total' }
+  ];
 
 
   // Properties

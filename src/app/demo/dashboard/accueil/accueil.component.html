@@ -49,6 +49,11 @@
                       <p class="name_revenu">Bénéfice total</p>
                       <p class="price_revenu">0.00</p>
                     </div>
+
+                  </div>
+
+                  <div class="revenu_img">
+                    <img src="../../../../assets/img/img_revenu1.png" alt="">
                   </div>
                 </div>
               </div>
@@ -338,8 +343,13 @@
         <div class="right_row_dash_profil">
           <!-- <h1>CHARTJS</h1> -->
           <!--The content below is only a placeholder and can be replaced.-->
-          <div id="chart">
-            <p>jhgf</p>
+          <div class="chart">
+            <canvas baseChart id="chart"
+              [datasets]="radarChartDatasets"
+              [options]="radarChartOptions"
+              [labels]="radarChartLabels"
+              [type]="'radar'">
+            </canvas>
           </div>
           
         </div>
@@ -348,6 +358,14 @@
     </div>
 
     
-      
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </div>

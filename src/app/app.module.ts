@@ -29,6 +29,7 @@ import { NavCollapseComponent } from './theme/layout/admin/navigation/nav-conten
 import { NavGroupComponent } from './theme/layout/admin/navigation/nav-content/nav-group/nav-group.component';
 import { NavItemComponent } from './theme/layout/admin/navigation/nav-content/nav-item/nav-item.component';
 import { SharedModule } from './theme/shared/shared.module';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 
@@ -59,11 +60,11 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     FormsModule, 
     ReactiveFormsModule, 
     BrowserAnimationsModule,
-    CommonModule, 
-    NgApexchartsModule,
+    CommonModule, NgApexchartsModule, 
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'fr-FR' }
+    { provide: LOCALE_ID, useValue: 'fr-FR',  },
+    provideCharts(withDefaultRegisterables())
   ],
   bootstrap: [AppComponent]
 })
